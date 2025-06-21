@@ -1,3 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Notes</title>
+</head>
+<body>
+  <h1>Note Taking App</h1>
+  <textarea id="noteArea" placeholder="Write your note..."></textarea>
+  <button onclick="saveNote()">Save</button>
+  <ul id="notesList"></ul>
+
+  <script>
+    function saveNote() {
+      const note = document.getElementById("noteArea").value;
+      const notes = JSON.parse(localStorage.getItem("notes")) || [];
+      notes.push(note);
+      localStorage.setItem("notes", JSON.stringify(notes));
+      displayNotes();
+    }
+
+    function displayNotes() {
+      const notes = JSON.parse(localStorage.getItem("notes")) || [];
+      const list = document.getElementById("notesList");
+      list.innerHTML = '';
+      notes.forEach((note, i) => {
+        const li = document.createElement('li');
+        li.textContent = note;
+        list.appendChild(li);
+      });
+    }
+
+    displayNotes();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!--
 <!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Groceries</title>
@@ -47,6 +93,7 @@
         margin
     }
 </style>
+-->
 <!--
 <body>
     <a href="groceries.html">back</a>
