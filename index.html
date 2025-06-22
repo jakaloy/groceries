@@ -1,38 +1,36 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>My Notes editted</title>
-</head>
-<body>
-  <h1>Note Taking App</h1>
-  <textarea id="noteArea" placeholder="Write your note..."></textarea>
-  <button onclick="saveNote()">Save</button>
-  <ul id="notesList"></ul>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css">
+		<title>Hello, World!</title>
+	</head>
+	<body>
+		<h1 id="heading"></h1>
+		<button id="button">Display Movie Data</button>
+		<button id="button2">Fetch a random UUID</button>
+		<button id="clear">Clear</button>
+		<input type="text" id="update-id" placeholder="Movie ID">
+		<input type="number" id="update-rating" placeholder="New Rating" step="0.1" min="0" max="10">
+		<button id="update-button">Update Rating</button>
+		<button id="commentsdisplay">Display All Like Comments</button>
+		<div class="addnewmovie">
+			<h2>Add New Movie</h2>
+			<input type="text" id="new-title" placeholder="Title">
+			<input type="date" id="new-release" placeholder="Release Date">
+			<input type="number" id="new-rating" placeholder="Rating" step="0.1" min="0" max="10">
+			<button id="add-button">Add Movie</button>
+		</div>
+		<div class="movielist"></div>
 
-  <script>
-    function saveNote() {
-      const note = document.getElementById("noteArea").value;
-      const notes = JSON.parse(localStorage.getItem("notes")) || [];
-      notes.push(note);
-      localStorage.setItem("notes", JSON.stringify(notes));
-      displayNotes();
-    }
 
-    function displayNotes() {
-      const notes = JSON.parse(localStorage.getItem("notes")) || [];
-      const list = document.getElementById("notesList");
-      list.innerHTML = '';
-      notes.forEach((note, i) => {
-        const li = document.createElement('li');
-        li.textContent = note;
-        list.appendChild(li);
-      });
-    }
 
-    displayNotes();
-  </script>
-</body>
+
+		<script src="scripts.js"></script>
+	</body>
 </html>
+
 
 
 

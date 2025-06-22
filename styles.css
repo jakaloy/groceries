@@ -1,0 +1,71 @@
+.movielist{
+	width:100%;
+	height:max-content;
+	background:#5eabe6;
+	display:flex;
+	flex-direction:column;
+}
+.movielist > .movie{
+	border-bottom:4px solid #98c7eb;
+}
+.movielist > .movie:last-child{
+	border-bottom:none;
+}
+.movie{
+
+}
+.info{
+	height:2ch;
+	width:max-content;
+	background:#4ea4e6;
+	padding:.5rem;
+	border-radius:.5ch;
+	margin:4px;
+	margin-left:1rem;
+}
+input{
+	width:12ch;
+}
+.movielisttwo{
+	width:100%;
+	height:max-content;
+	background:#c4b9ed;
+	display:flex;
+	flex-direction:column;
+}
+.user{
+	height:2ch;
+	width:max-content;
+	background:#aa98eb;
+	padding:.5rem;
+	border-radius:.5ch;
+	margin:4px;
+	margin-left:1rem;
+}
+.comment{
+	height:2ch;
+	width:max-content;
+	background:#947bed;
+	padding:.5rem;
+	border-radius:.5ch;
+	margin:4px;
+	margin-left:1rem;
+}
+.date{
+	height:2ch;
+	width:max-content;
+	background:#7150eb;
+	padding:.5rem;
+	border-radius:.5ch;
+	margin:4px;
+	margin-left:1rem;
+}
+.likes{
+	height:2ch;
+	width:max-content;
+	background:#562bf0;
+	padding:.5rem;
+	border-radius:.5ch;
+	margin:4px;
+	margin-left:1rem;
+}
